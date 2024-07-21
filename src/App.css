@@ -87,7 +87,7 @@ h3{
 }
 
 nav.navbar {
-  padding: 18px 0;
+  padding: 18px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -101,22 +101,24 @@ nav.navbar.scrolled {
 }
 
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: 9%;
 }
 
 .navbar .nav-link, .navbar-brand, .navbar-text {
-  color: rgb(255, 255, 255) !important;
+  color: rgb(209, 209, 209);
   font-size: 20px;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
+  opacity: 1;
 }
+
 span.navbar-text {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
 .social-logo {
     display: inline-block;
     margin-left: 48px;
@@ -152,7 +154,7 @@ span.navbar-text {
 }
 
 .social-logo a img {
-  width: 50%;
+  width: 75%;
   z-index: 1;
   transition: 0.3s ease-in-out;
   }
@@ -193,7 +195,7 @@ span.navbar-text {
   transition: .3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #121212;
+  color: #000000;
 }
 .navbar-text button:hover::before {
   width: 100%;
@@ -256,6 +258,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
+
 .social-logo {
   display: inline-block;
   margin-left: 10px;
@@ -265,4 +268,97 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
 .nav-items {
   display: flex;
+}
+
+
+/*MAIN CSS*/
+.main{
+  margin-top: 0;
+  padding: 200px 0 100px 0;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main .about{
+  width: 80%;
+  text-align: left;
+}
+
+.main .p-text{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.main h2{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.main h3, .main h4{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 25px;
+  color: white;
+  display: block;
+}
+
+.main p {
+  color: #cecece;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+.main button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.main button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.main button:hover svg {
+  margin-left: 25px;
+}
+
+.main img{
+  height: 300px;
+
+  animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+
+@media screen and (max-width: 575px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px
+  }
 }

@@ -1,5 +1,8 @@
 import {Container, Nav, Navbar} from 'react-bootstrap';
 import {useState, useEffect} from 'react';
+import github from '../assets/images/github.png';
+import linkedin from '../assets/images/linkedin.png';
+import resume from '../assets/images/resume.png';
 
 export const Header = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -26,10 +29,6 @@ export const Header = () => {
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled":""}>
             <Container>
-                <Navbar.Brand href="#home">
-                    <img src={''} alt="holder"/>
-                </Navbar.Brand>
-
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
@@ -37,14 +36,15 @@ export const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="#home" className={activeLink === 'home' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('home')}>HOME</Nav.Link>
+                    <Nav.Link href="#aboutme" className={activeLink === 'aboutme' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('about_me')}>ABOUT ME</Nav.Link>
                     <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('skills')}>SKILLS</Nav.Link>
                     <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('projects')}>PROJECTS</Nav.Link>
                 </Nav>
                 <span className="navbar-text">
                     <div className="social-logo">
-                        <a href="#"><img src={''} alt="h"/></a>
-                        <a href="#"><img src={''} alt="h"/></a>
-                        <a href="#"><img src={''} alt="h"/></a>
+                        <a href="#"><img src={github}/></a>
+                        <a href="#"><img src={linkedin}/></a>
+                        <a href="#"><img src={resume}/></a>
                     </div>
                     <button className="contact" onClick={() => console.log('connect')}>LETS CONNECT</button>
                 </span>
