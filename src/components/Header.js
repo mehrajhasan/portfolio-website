@@ -42,8 +42,8 @@ export const Header = () => {
                 </Nav>
                 <span className="navbar-text">
                     <div className="social-logo">
-                        <a href="#"><img src={github}/></a>
-                        <a href="#"><img src={linkedin}/></a>
+                        <a href="https://github.com/mehrajhasan"><img src={github}/></a>
+                        <a href="https://linkedin.com/in/mehrajhasan"><img src={linkedin}/></a>
                         <a href="#"><img src={resume}/></a>
                     </div>
                     <button className="contact" onClick={() => console.log('connect')}>LETS CONNECT</button>
