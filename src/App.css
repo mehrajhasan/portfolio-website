@@ -336,21 +336,8 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
 .main img{
   height: 300px;
-
-  animation: updown 3s linear infinite;
 }
 
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
@@ -363,11 +350,45 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   }
 }
 
+/*Main about in from left/right*/
+.about{
+  display: inline-block;
+  animation: slideFromLeft 1s ease-out;
+  visibility: visible;
+}
 
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.main img{
+  display: inline-block;
+  animation: slideFromRight 1s ease-out;
+}
+
+@keyframes slideFromRight{
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /* Skills */
 
 .skill {
-  padding: 0 0 50px 0;
+  padding: 10px 0 50px;
   position: relative;
 }
 
@@ -375,8 +396,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   background: black;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  padding: 30px 50px;
 }
 
 .skill .item {
@@ -389,7 +409,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
 .skill h2{
   color: white;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -407,16 +427,46 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 
 .skill-slider .item img{
-  width: 50%;
+  width: 30%;
   margin: 0 auto 15px auto;
 }
 
-.background-image-left{
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+/* Projects */
+
+.project {
+  padding: 0 0 50px 0;
+  position: relative;
 }
 
+.project h2{
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
 
+.project p{
+  color: #8f8f8f;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+.projects{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projects-box{
+  background: black;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+}
+
+.project .item img{
+  height: auto;
+  width: 220px;
+  margin: 0 auto 15px auto;
+}
