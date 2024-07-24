@@ -1,6 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Container, Row, Col } from 'react-bootstrap';
 import picture from '../assets/images/picture.JPG';
+import snitch from '../assets/images/goldensnitch.gif';
+import hedwig from '../assets/images/hedwig.gif';
 
 export const Main = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -16,7 +19,8 @@ export const Main = () => {
         },delta)
 
         return () => {clearInterval(ticker)};
-    }, [text])
+    }, [text]);
+    
 
     const tick = () => {
         let x = loopNum % rotating.length;
@@ -38,12 +42,15 @@ export const Main = () => {
             setDelta(500);
         }
     }
+
+    const { ref: about, inView: aboutisVisible } = useInView();
+
     return (
         <section className="main" id="home">
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <div className="about">
+                        <div ref = {about} className={`about ${aboutisVisible ? 'in-view' : ''}`}>
                             <h2>{`I am Mehraj Hasan`}</h2>
                             <h3>My name is Mehraj Hasan. I am an undergraduate student working towards my degree in Computer Science at CUNY-Hunter College with a minor in Mathematics.</h3>
                             <h4>I am passionate about creation and growth which led me to my focus in software engineering. Being a student is a value I hold dear as I believe there are always opportunities to grow your strengths and skills, and I find joy in taking these opportunities and my free-time to build my skills as well as create fun and meaningful projects!</h4>
