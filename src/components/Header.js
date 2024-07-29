@@ -10,7 +10,7 @@ export const Header = () => {
 
     useEffect(() => {
         const onScroll = () => {
-            if(window.scrollUp > 50){
+            if(window.scrollY > 50){
                 seScrolled(true);
             } else{
                 seScrolled(false);
@@ -36,15 +36,15 @@ export const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="#home" className={activeLink === 'home' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('home')}>HOME</Nav.Link>
-                    <Nav.Link href="#aboutme" className={activeLink === 'aboutme' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('about_me')}>ABOUT ME</Nav.Link>
+                    <Nav.Link href="#aboutme" className={activeLink === 'aboutme' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('aboutme')}>ABOUT ME</Nav.Link>
                     <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('skills')}>SKILLS</Nav.Link>
                     <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('projects')}>PROJECTS</Nav.Link>
                 </Nav>
                 <span className="navbar-text">
                     <div className="social-logo">
-                        <a href="https://github.com/mehrajhasan"><img src={github}/></a>
-                        <a href="https://linkedin.com/in/mehrajhasan"><img src={linkedin}/></a>
-                        <a href="#"><img src={resume}/></a>
+                        <a href="https://github.com/mehrajhasan"><img src={github} alt="git"/></a>
+                        <a href="https://linkedin.com/in/mehrajhasan"><img src={linkedin} alt="ln"/></a>
+                        <a href="https://linkedin.com/in/mehrajhasan"><img src={resume} alt="res"/></a>
                     </div>
                     <button className="contact" onClick={() => console.log('connect')}>LETS CONNECT</button>
                 </span>
