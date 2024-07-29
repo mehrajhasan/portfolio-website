@@ -9,7 +9,7 @@ export const Projects = () => {
             <Container>
                 <div className="projects-box">
                     <h2>Projects</h2>
-                    <p>Listed below are the projects I have created</p>
+                    <p>Listed below are some of the projects I have created</p>
                 
                     <div className="projects">
                         <div className="item">
