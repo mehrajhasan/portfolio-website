@@ -1,47 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Container, Row, Col } from 'react-bootstrap';
 import picture from '../assets/images/picture.JPG';
-import snitch from '../assets/images/goldensnitch.gif';
-import hedwig from '../assets/images/hedwig.gif';
 
 export const Main = () => {
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const rotating = ["Software Engineer", "Web Developer", "etc"];
-    const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300-Math.random()*100);
-    const period = 2000;
-
-    useEffect(()=>{
-        let ticker = setInterval(()=>{
-            tick();
-        },delta)
-
-        return () => {clearInterval(ticker)};
-    }, [text]);
-    
-
-    const tick = () => {
-        let x = loopNum % rotating.length;
-        let fullText = rotating[x];
-        let updated = isDeleting?fullText.substring(0,text.length-1) : fullText.substring(0,text.length+1);
-
-        setText(updated);
-
-        if(isDeleting){
-            setDelta(prevDelta=>prevDelta/2);
-        }
-
-        if(!isDeleting && updated === fullText){
-            setIsDeleting(true);
-            setDelta(period);
-        } else if(isDeleting && updated === ''){
-            setIsDeleting(false);
-            setLoopNum(loopNum+1);
-            setDelta(500);
-        }
-    }
 
     const { ref: about, inView: aboutisVisible } = useInView();
 
