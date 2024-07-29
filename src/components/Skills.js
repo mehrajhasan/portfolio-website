@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { useInView } from 'react-intersection-observer';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import cplusplus from '../assets/images/c++.png';
@@ -30,20 +31,22 @@ export const Skills = () => {
         }
     };
 
+    const { ref: skills, inView: skillisVisible } = useInView();
+
     return (
         <section className="skill" id="skills">
             <Container>
                 <Row>
                     <Col>
-                        <div className="skill-box">
+                        <div ref={skills} className={`skill-box ${skillisVisible ? 'in-view' : ''}`}>
                             <h2>
                                 Skills
                             </h2>
                             <p>
-                                Listed below are some of the languages/frameworks I am knowledgable in
+                                Listed below are some of the languages/frameworks I am knowledgeable in
                             </p>
 
-                            <Carousel responsive={responsive} infinite={true} className="skill-slider" interval={500}>
+                            <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={cplusplus} alt='img'/>
                                 </div>
