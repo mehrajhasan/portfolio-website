@@ -31,7 +31,7 @@ html {
 }
 
 body{
-  background-color: rgba(15, 15, 26, 0.986) !important;
+  background-color: rgb(22, 22, 38) !important;
   color: rgb(255, 255, 255);
   font-family: 'Gotham' !important;
   font-weight: 700 !important;
@@ -97,7 +97,7 @@ nav.navbar {
 
 nav.navbar.scrolled {
   padding: 18px 0;
-  background-color: #121212;
+  background-color: rgb(20, 20, 34);
 }
 
 nav.navbar a.navbar-brand {
@@ -105,10 +105,17 @@ nav.navbar a.navbar-brand {
 }
 
 .navbar .nav-link, .navbar-brand, .navbar-text {
-  color: rgb(209, 209, 209);
+  color: rgb(255, 255, 255);
   font-size: 20px;
 }
 
+.navbar .nav-link.active{
+  color: rgb(140, 140, 140) !important;
+}
+
+.navbar .nav-link:hover{
+  color: rgb(180, 180, 180) !important;
+}
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
@@ -179,10 +186,9 @@ span.navbar-text {
 }
 .navbar-text button span {
   min-width: 700px;
-}
-.navbar-text button span {
   z-index: 1;
 }
+
 .navbar-text button::before {
   content: "";
   width: 100%;
@@ -315,33 +321,10 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   line-height: 1.5em;
   width: 96%;
 }
-.main button {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-}
-.main button svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
-}
-.main button:hover svg {
-  margin-left: 25px;
-}
 
 .main img{
   height: 300px;
 }
-
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
-}
-
 
 @media screen and (max-width: 575px) {
   .main {
@@ -353,7 +336,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 /*Main about in from left/right*/
 .about{
   display: inline-block;
-  animation: slideFromLeft 1s ease-out;
+  animation: slideFromLeft .8s ease-out;
   visibility: visible;
 }
 
@@ -371,7 +354,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
 .main img{
   display: inline-block;
-  animation: slideFromRight 1s ease-out;
+  animation: slideFromRight .8s ease-out;
 }
 
 @keyframes slideFromRight{
@@ -385,6 +368,33 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
   }
 }
+
+/* About Me/Interests */
+
+.aboutbox{
+  margin-top: 0;
+  padding: 100px 0 100px 0;
+}
+
+.aboutbox h2{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.aboutbox p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 25px;
+  color: white;
+  display: block;
+}
+
 /* Skills */
 
 .skill {
@@ -397,6 +407,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   border-radius: 64px;
   text-align: center;
   padding: 30px 50px;
+  animation: topDown 1s ease-out;
 }
 
 .skill .item {
@@ -429,6 +440,18 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .skill-slider .item img{
   width: 30%;
   margin: 0 auto 15px auto;
+}
+
+@keyframes topDown{
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 /* Projects */
@@ -469,4 +492,39 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   height: auto;
   width: 220px;
   margin: 0 auto 15px auto;
+}
+
+.connect{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.connectbox {
+  width: 50%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; 
+}
+
+.nameemail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 20px 20px 20px;
+  margin: 20px;
+}
+
+
+.connectbox h2{
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
 }
