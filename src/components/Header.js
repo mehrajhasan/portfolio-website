@@ -46,7 +46,11 @@ export const Header = () => {
                         <a href="https://linkedin.com/in/mehrajhasan"><img src={linkedin} alt="ln"/></a>
                         <a href="https://linkedin.com/in/mehrajhasan"><img src={resume} alt="res"/></a>
                     </div>
-                    <button className="contact" onClick={() => console.log('connect')}>LETS CONNECT</button>
+                    <button className="contact">
+                        <Nav.Link href="#connect" className={activeLink === 'connect' ? 'active header-link' : 'header-link'} onClick={() => onUpdateActiveLink('connect')}>
+                        LETS CONNECT
+                        </Nav.Link>
+                    </button>
                 </span>
                 </Navbar.Collapse>
             </Container>
