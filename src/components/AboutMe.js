@@ -1,4 +1,5 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap';
+
 export const AboutMe = () => {
 
     return (
@@ -8,9 +9,9 @@ export const AboutMe = () => {
                     <Col xs={12} md={6} xl={7}>
                         <div className="interests">
                             <h2>Interests</h2>
-                            <li>SWE</li>
                             <li>Front-end</li>
                             <li>Back-end</li>
+                            <li>Software Development</li>
                             <li>Cybersecurity</li>
                             <li>Machine Learning</li>
                         </div>
@@ -19,7 +20,11 @@ export const AboutMe = () => {
                     <Col xs={12} md={6} xl={7}>
                         <div className="funfacts">
                             <h2>Fun Facts</h2>
-                            <p>Outside of </p>
+                            <li>I'm an entrepreneur</li>
+                            <li>I'm an avid gym-goer</li>
+                            <li>I'm a car enthusiast</li>
+                            <li>I have 10 cats</li>
+                            <li>I'm a big Harry Potter fan</li>
                         </div>
                     </Col>
                 </Row>
