@@ -441,7 +441,12 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   border-radius: 64px;
   text-align: center;
   padding: 30px 50px;
-  animation: topDown 1s ease-out;
+  visibility: hidden;
+}
+
+.skill-box.in-view{
+  visibility: visible;
+  animation: topDown 1.2s ease-out;
 }
 
 .skill .item {
@@ -495,6 +500,11 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   position: relative;
 }
 
+.projects-box.in-view{
+  visibility: visible;
+  animation: topDown 1.2s ease-out;
+}
+
 .project h2{
   color: white;
   font-size: 30px;
@@ -520,6 +530,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
+  visibility: hidden;
 }
 
 .project .item img{
@@ -602,4 +613,25 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #632592;
+}
+
+/* FOOTER */
+.footer{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(16, 16, 27);
+  color: white;
+  padding-top: 20px;
+}
+
+.footer h2{
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+}
+
+.footer p{
+  font-size: 12px;
 }
