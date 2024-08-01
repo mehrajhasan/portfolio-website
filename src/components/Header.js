@@ -44,7 +44,7 @@ export const Header = () => {
                     <div className="social-logo">
                         <a href="https://github.com/mehrajhasan"><img src={github} alt="git"/></a>
                         <a href="https://linkedin.com/in/mehrajhasan"><img src={linkedin} alt="ln"/></a>
-                        <a href="https://linkedin.com/in/mehrajhasan"><img src={resume} alt="res"/></a>
+                        <a href="https://docs.google.com/document/d/1i93U6ntfsKNC1F6I6-m8PL2BP6gdfD1Y/edit?usp=sharing&ouid=110343639689020574930&rtpof=true&sd=true"><img src={resume} alt="res"/></a>
                     </div>
                     <button className="contact">
                         <Nav.Link href="#connect" className={activeLink === 'connect' ? 'active header-link' : 'header-link'} onClick={() => onUpdateActiveLink('connect')}>
