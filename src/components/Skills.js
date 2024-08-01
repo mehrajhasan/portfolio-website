@@ -31,7 +31,10 @@ export const Skills = () => {
         }
     };
 
-    const { ref: skills, inView: skillisVisible } = useInView();
+    const { ref: skills, inView: skillisVisible } = useInView({
+        triggerOnce: true, 
+        threshold: 0.1 
+    });
 
     return (
         <section className="skill" id="skills">
