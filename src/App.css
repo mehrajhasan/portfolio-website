@@ -97,7 +97,7 @@ nav.navbar {
 
 nav.navbar.scrolled {
   padding: 18px 0;
-  background-color: rgb(20, 20, 34);
+  background-color: rgb(16, 16, 27);
 }
 
 nav.navbar a.navbar-brand {
@@ -120,6 +120,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
+
 
 span.navbar-text {
   display: flex;
@@ -200,9 +201,15 @@ span.navbar-text {
   z-index: -1;
   transition: .3s ease-in-out;
 }
+
 .navbar-text button:hover {
   color: #000000;
 }
+
+.navbar-text button{
+  color: black;
+}
+
 .navbar-text button:hover::before {
   width: 100%;
   height: 100%;
@@ -309,7 +316,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .main h3, .main h4{
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 2;
   margin-top: 25px;
   color: white;
   display: block;
@@ -323,7 +330,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 
 .main img{
-  height: 300px;
+  height: 325px;
 }
 
 @media screen and (max-width: 575px) {
@@ -372,8 +379,22 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 /* About Me/Interests */
 
 .aboutbox{
-  margin-top: 0;
-  padding: 100px 0 100px 0;
+  width: 80%;
+}
+
+.aboutbox .align-items-center{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 90px 0 150px 100px;
+  line-height: 1.5;
+}
+
+.aboutbox .interests{
+  font-size: 15px;
+  font-weight: 400;
+  color: #cecece;
+  line-height: 2.5;
 }
 
 .aboutbox h2{
@@ -386,19 +407,32 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   display: block;
 }
 
-.aboutbox p{
+.aboutbox .funfacts{
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.5;
-  margin-top: 25px;
-  color: white;
-  display: block;
+  color: #cecece;
+  line-height: 2.5;
+}
+
+.hover img{
+  margin-top: -80px;
+  margin-left: -150px;
+  height: 100px;
+}
+
+.funfacts img{
+  width: 80px;
+
+}
+
+.hp img{
+  visibility: hidden;
 }
 
 /* Skills */
 
 .skill {
-  padding: 10px 0 50px;
+  padding: 10px 0 100px;
   position: relative;
 }
 
@@ -496,6 +530,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
 .connect{
   display: flex;
+  flex-flow: row;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -513,18 +548,58 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   background-color: black; 
 }
 
-.nameemail{
+.connect .nameemail{
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 20px 20px 20px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
+.message{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
 
 .connectbox h2{
   color: white;
   font-size: 30px;
   font-weight: 700;
+}
+
+.connectbox form{
+  width: 90%;
+}
+
+textarea{
+  height: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #762cae;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #632592;
 }
