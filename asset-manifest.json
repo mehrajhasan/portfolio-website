@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6705c82.css",
+    "main.js": "/static/js/main.daa88392.js",
+    "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
+    "static/media/picture.JPG": "/static/media/picture.8d653bcb4d06fdbb10ff.JPG",
+    "static/media/example.png": "/static/media/example.b5cabcbedff991813d9c.png",
+    "static/media/c++.png": "/static/media/c++.666af1b3598c92045b63.png",
+    "static/media/express.png": "/static/media/express.6a3e055a6226b08114ef.png",
+    "static/media/css.png": "/static/media/css.19c8605d6b2861f5fbe0.png",
+    "static/media/ron.gif": "/static/media/ron.e941d19d3de823b8b645.gif",
+    "static/media/working.gif": "/static/media/working.7902837e3fe5fef97fab.gif",
+    "static/media/harry.gif": "/static/media/harry.645c5aeb358b11793dba.gif",
+    "static/media/connect.png": "/static/media/connect.b9259f975ed7b5fb96aa.png",
+    "static/media/Gotham-Black.otf": "/static/media/Gotham-Black.c9e42599a779a72eaadc.otf",
+    "static/media/Gotham-Thin.otf": "/static/media/Gotham-Thin.6447770f7eb4c8885d73.otf",
+    "static/media/Gotham-Light.otf": "/static/media/Gotham-Light.59aa40045d8df0b87a73.otf",
+    "static/media/react.png": "/static/media/react.e71f4c5b0c4306d65355.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/resume.png": "/static/media/resume.3fcbf42f02a092266518.png",
+    "static/media/linkedin.png": "/static/media/linkedin.4e0ba40f2df0a9bcd114.png",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.e6705c82.css.map": "/static/css/main.e6705c82.css.map",
+    "main.daa88392.js.map": "/static/js/main.daa88392.js.map",
+    "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6705c82.css",
+    "static/js/main.daa88392.js"
+  ]
+}
