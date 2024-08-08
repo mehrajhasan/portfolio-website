@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import { useInView } from 'react-intersection-observer';
 import proj1 from '../assets/images/example.png';
+import wordle from '../assets/images/wordle.png';
 import wip from '../assets/images/working.gif';
 
 export const Projects = () => {
@@ -41,7 +42,7 @@ export const Projects = () => {
                         </div>
 
                         <div className="item">
-                            <img src={wip} alt='img'/>
+                            <a href='https://mehrajs-wordle.netlify.app'><img src={wordle} alt='img'/></a>
                         </div>
 
                         <div className="item">
