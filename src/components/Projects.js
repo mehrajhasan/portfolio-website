@@ -46,7 +46,7 @@ export const Projects = () => {
                         </div>
 
                         <div className="item">
-                            <img src={wip} alt='img'/>
+                            <a href="https://watchitnowbymehraj.netlify.app"><img src={watchitnow} alt='img'/></a>
                         </div>
                     </div>
                 </div>
