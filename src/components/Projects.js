@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import proj1 from '../assets/images/example.png';
 import wordle from '../assets/images/wordle.png';
 import wip from '../assets/images/working.gif';
+import watchitnow from '../assets/images/watchitnow.png';
 
 export const Projects = () => {
     const responsive = {
@@ -46,7 +47,7 @@ export const Projects = () => {
                         </div>
 
                         <div className="item">
-                            <a href="https://watchitnowbymehraj.netlify.app"><img src={watchitnow} alt='img'/></a>
+                            <a href="https://watchitnowbymehraj.netlify.app"><img src={watchitnow} alt='img'/> </a>
                         </div>
                     </div>
                 </div>
