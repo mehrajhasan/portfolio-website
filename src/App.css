@@ -506,15 +506,20 @@ section {
   border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
-/* Skills Section */
-/* Skills Section - New Layout */
+#skills{
+  margin-bottom: -100px;
+  padding: -25px;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  padding-top: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 .skill-category-card {
   background: rgba(0, 0, 0, 0.5);

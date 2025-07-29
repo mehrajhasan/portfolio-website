@@ -1,18 +1,15 @@
-// components/Main.js
 import React from 'react';
 
 const Main = () => {
-  // Stats data
   const stats = [
-    { number: '5+', label: 'Projects Built' },
-    { number: '2+', label: 'Years Experience' },
+    { number: '10+', label: 'Projects Built' },
+    { number: '3+', label: 'Years Experience' },
     { number: '80%', label: 'Efficiency Improved' },
     { number: '100%', label: 'Passion for Code' }
   ];
 
   return (
     <>
-      {/* Hero Section */}
       <section id="hero" className="hero">
         <div className="terminal">
           <div className="terminal-header">
@@ -44,7 +41,7 @@ const Main = () => {
             </div>
             <div className="terminal-line">
               <span className="output">
-                2+ years building and shipping full-stack applications used in production
+                3+ years building and shipping full-stack applications used in production
               </span>
             </div>
             <div className="terminal-line">
@@ -53,7 +50,7 @@ const Main = () => {
             </div>
             <div className="terminal-line">
               <span className="output">
-                <span className="highlight">CUNY Hunter College</span> - Computer Science & Mathematics{' '}
+                <span className="highlight">CUNY Hunter College</span> - Computer Science & Mathematics (2025){' '}
               </span>
             </div>
             <div className="terminal-line">

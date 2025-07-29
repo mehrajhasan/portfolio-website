@@ -1,13 +1,11 @@
-// components/Projects.js
 import React from 'react';
 
 const Projects = () => {
-  // Projects data
   const projects = [
     {
       title: 'PlanAway',
       description: 'Building a collaborative travel planner with real-time itinerary editing, shared reservations, and multi-user expense tracking. Engineered offline-ready guest mode with localStorage sync, cutting onboarding friction by 80%. Deploying on GCP using Cloud Run.',
-      tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'GCP']
+      tech: ['Java', 'Spring Boot', 'React.js', 'PostgreSQL', 'GCP']
     },
     {
       title: 'NutriLift',
@@ -20,10 +18,20 @@ const Projects = () => {
       tech: ['Node.js', 'Got', 'Cheerio', 'Discord API', 'Web Scraping']
     },
     {
+      title: 'Matching Engine',
+      description: 'Java-based terminal application simulating a basic trading system with real-time limit order matching',
+      tech: ['Java']
+    },
+    {
+      title: 'Java To Do App',
+      description: 'Simple CRUD web app demonstrating layered Spring Boot architecture',
+      tech: ['Java', 'Spring Boot', 'JPA', 'REST APIs']
+    },
+    {
       title: 'Watch It Now',
       description: 'Developed a web application to monitor and retrieve movie/TV show availability across platforms. Integrated Watchmode API using Axios, cutting redundant fetches by 60%. Built user-friendly React.js frontend for displaying content data.',
       tech: ['React.js', 'Node.js', 'Express.js', 'Axios', 'Watchmode API']
-    }
+    },
   ];
 
   return (

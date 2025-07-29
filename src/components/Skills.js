@@ -1,12 +1,10 @@
-// components/Skills.js
 import React from 'react';
 
 const Skills = () => {
-  // Clean, simple skills organized by category
   const skillCategories = [
     {
       category: "Languages",
-      skills: ['Java', 'JavaScript', 'Swift', 'Python', 'C++', 'HTML', 'CSS']
+      skills: ['Java', 'C++', 'JavaScript', 'Swift', 'HTML', 'CSS', 'Python']
     },
     {
       category: "Frameworks", 
@@ -14,12 +12,9 @@ const Skills = () => {
     },
     {
       category: "Developer Tools",
-      skills: ['PostgreSQL', 'Maven', 'Git', 'Google Cloud Platform']
+      skills: ['PostgreSQL', 'Maven', 'Git', 'Google Cloud Platform', 'Docker']
     },
-    {
-      category: "APIs & Libraries",
-      skills: ['JWT', 'Axios', 'Cheerio', 'Discord API', 'Watchmode API']
-    }
+
   ];
 
   return (

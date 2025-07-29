@@ -1,61 +1,72 @@
-import {Container, Nav, Navbar} from 'react-bootstrap';
-import {useState, useEffect} from 'react';
-import github from '../assets/images/github.png';
-import linkedin from '../assets/images/linkedin.png';
-import resume from '../assets/images/resume.png';
-
 export const Header = () => {
-    const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, seScrolled] = useState(false);
+  const stats = [
+    { number: '100+', label: 'Projects Deployed' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '50M+', label: 'API Requests Handled' },
+    { number: '99.9%', label: 'Uptime Achieved' }
+  ];
 
-    useEffect(() => {
-        const onScroll = () => {
-            if(window.scrollY > 50){
-                seScrolled(true);
-            } else{
-                seScrolled(false);
-            }
-        }
+  return (
+    <>
+      <section id="hero" className="hero">
+        <div className="terminal">
+          <div className="terminal-header">
+            <div className="terminal-btn btn-close"></div>
+            <div className="terminal-btn btn-minimize"></div>
+            <div className="terminal-btn btn-maximize"></div>
+            <div className="terminal-title">mehraj@portfolio:~</div>
+          </div>
+          <div className="terminal-body">
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">whoami</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">
+                <span className="highlight">Mehraj Hasan</span> - Senior Full-Stack Engineer
+              </span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">cat skills.txt</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">React • Node.js • Python • TypeScript • AWS • Docker</span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">echo $EXPERIENCE</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">
+                <span className="highlight">5+ years</span> building scalable applications at{' '}
+                <span className="highlight">enterprise scale</span>
+              </span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="cursor-blink">█</span>
+            </div>
+          </div>
+        </div>
+        <div className="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div style={{ fontSize: '20px' }}>↓</div>
+        </div>
+      </section>
 
-        window.addEventListener("scroll", onScroll);
-
-        return () => window.removeEventListener("scroll", onScroll);
-    }, [])
-
-    const onUpdateActiveLink = (val) => {
-        setActiveLink(val);
-    }
-    
-    return (
-        <Navbar expand="lg" className={scrolled ? "scrolled":""}>
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav">
-                    <span className="navbar-toggler-icon"></span>
-                </Navbar.Toggle>
-
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home" className={activeLink === 'home' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('home')}>HOME</Nav.Link>
-                    <Nav.Link href="#aboutme" className={activeLink === 'aboutme' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('aboutme')}>ABOUT ME</Nav.Link>
-                    <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('skills')}>SKILLS</Nav.Link>
-                    <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active header-link':'header-link'} onClick={() => onUpdateActiveLink('projects')}>PROJECTS</Nav.Link>
-                </Nav>
-                <span className="navbar-text">
-                    <div className="social-logo">
-                        <a href="https://github.com/mehrajhasan"><img src={github} alt="git"/></a>
-                        <a href="https://linkedin.com/in/mehrajhasan"><img src={linkedin} alt="ln"/></a>
-                        <a href="https://docs.google.com/document/d/1i93U6ntfsKNC1F6I6-m8PL2BP6gdfD1Y/edit?usp=sharing&ouid=110343639689020574930&rtpof=true&sd=true"><img src={resume} alt="res"/></a>
-                    </div>
-                    <button className="contact">
-                        <Nav.Link href="#connect" className={activeLink === 'connect' ? 'active header-link' : 'header-link'} onClick={() => onUpdateActiveLink('connect')}>
-                        LETS CONNECT
-                        </Nav.Link>
-                    </button>
-                </span>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
-}
+      <section className="stats-section reveal">
+        <div className="stats-container">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-card">
+              <div className="stat-number">{stat.number}</div>
+              <div className="stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Header;
