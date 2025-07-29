@@ -1,29 +1,85 @@
-import { useInView } from 'react-intersection-observer';
-import { Container, Row, Col } from 'react-bootstrap';
-import picture from '../assets/images/picture.JPG';
+// components/Main.js
+import React from 'react';
 
-export const Main = () => {
+const Main = () => {
+  // Stats data
+  const stats = [
+    { number: '5+', label: 'Projects Built' },
+    { number: '2+', label: 'Years Experience' },
+    { number: '80%', label: 'Efficiency Improved' },
+    { number: '100%', label: 'Passion for Code' }
+  ];
 
-    const { ref: about, inView: aboutisVisible } = useInView();
+  return (
+    <>
+      {/* Hero Section */}
+      <section id="hero" className="hero">
+        <div className="terminal">
+          <div className="terminal-header">
+            <div className="terminal-btn btn-close1"></div>
+            <div className="terminal-btn btn-minimize"></div>
+            <div className="terminal-btn btn-maximize"></div>
+            <div className="terminal-title">mehraj@portfolio:~</div>
+          </div>
+          <div className="terminal-body">
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">whoami</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">
+                <span className="highlight">Mehraj Hasan</span> - Software Engineer
+              </span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">cat skills.txt</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">Java • Spring Boot • C++ • JavaScript (Node.js, React) • PostgreSQL • GCP</span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">echo $EXPERIENCE</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">
+                2+ years building and shipping full-stack applications used in production
+              </span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="command">echo $EDUCATION</span>
+            </div>
+            <div className="terminal-line">
+              <span className="output">
+                <span className="highlight">CUNY Hunter College</span> - Computer Science & Mathematics{' '}
+              </span>
+            </div>
+            <div className="terminal-line">
+              <span className="prompt">$</span>
+              <span className="cursor-blink">█</span>
+            </div>
+          </div>
+        </div>
+        <div className="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div style={{ fontSize: '20px' }}>↓</div>
+        </div>
+      </section>
 
-    return (
-        <section className="main" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <div ref = {about} className={`about ${aboutisVisible ? 'in-view' : ''}`}>
-                            <h2>{`I am Mehraj Hasan`}</h2>
-                            <h3>My name is Mehraj Hasan. I am an undergraduate student working towards my degree in Computer Science at CUNY-Hunter College with a minor in Mathematics.</h3>
-                            <h4>I am passionate about creation and growth which led me to my focus in software engineering. Being a student is a value I hold dear as I believe there are always opportunities to grow your strengths and skills, and I find joy in taking these opportunities and my free-time to build my skills as well as create fun and meaningful projects!</h4>
-                        </div>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={picture} alt="img"/>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    )
-} 
+      <section className="stats-section reveal">
+        <div className="stats-container">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-card">
+              <div className="stat-number">{stat.number}</div>
+              <div className="stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Main;
