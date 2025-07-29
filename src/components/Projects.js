@@ -1,59 +1,62 @@
-import { Container } from 'react-bootstrap';
-import { useInView } from 'react-intersection-observer';
-import proj1 from '../assets/images/example.png';
-import wordle from '../assets/images/wordle.png';
-import wip from '../assets/images/working.gif';
-import watchitnow from '../assets/images/watchitnow.png';
+// components/Projects.js
+import React from 'react';
 
-export const Projects = () => {
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000},
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024},
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464},
-            items: 5
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0},
-            items: 1
-        }
-    };
+const Projects = () => {
+  // Projects data
+  const projects = [
+    {
+      title: 'PlanAway',
+      description: 'Building a collaborative travel planner with real-time itinerary editing, shared reservations, and multi-user expense tracking. Engineered offline-ready guest mode with localStorage sync, cutting onboarding friction by 80%. Deploying on GCP using Cloud Run.',
+      tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'GCP']
+    },
+    {
+      title: 'NutriLift',
+      description: 'Developing an iOS fitness app using Swift and SwiftUI for frontend with Node.js and PostgreSQL backend. Implemented JWT auth flow, cutting login-related data sync issues by 75%. Built secure user data APIs with token validation.',
+      tech: ['Swift', 'SwiftUI', 'Node.js', 'PostgreSQL', 'JWT']
+    },
+    {
+      title: 'CUNYBot',
+      description: 'Developed an automated bot to monitor and enroll in CUNY courses using web scraping and HTTP automation, improving enrollment efficiency by 80%. Engineered multi-user concurrency and integrated Discord webhooks for real-time notifications.',
+      tech: ['Node.js', 'Got', 'Cheerio', 'Discord API', 'Web Scraping']
+    },
+    {
+      title: 'Watch It Now',
+      description: 'Developed a web application to monitor and retrieve movie/TV show availability across platforms. Integrated Watchmode API using Axios, cutting redundant fetches by 60%. Built user-friendly React.js frontend for displaying content data.',
+      tech: ['React.js', 'Node.js', 'Express.js', 'Axios', 'Watchmode API']
+    }
+  ];
 
-    const { ref: project, inView: projectIsVisible } = useInView({
-        triggerOnce: true, 
-        threshold: 0.1 
-    });
-
-    return (
-        <section className="project" id="projects">
-            <Container>
-                <div ref={project} className={`projects-box ${projectIsVisible ? 'in-view' : ''}`}>
-                    <h2>Projects</h2>
-                    <p>Listed below are some of the projects I have created</p>
-                
-                    <div className="projects">
-                        <div className="item">
-                            <a href='https://github.com/mehrajhasan/Rock_Paper_Scissors'><img src={proj1} alt='img'/></a>
-                        </div>
-
-                        <div className="item">
-                            <a href='https://mehrajs-wordle.netlify.app'><img src={wordle} alt='img'/></a>
-                        </div>
-
-                        <div className="item">
-                            <a href="https://watchitnowbymehraj.netlify.app"><img src={watchitnow} alt='img'/> </a>
-                        </div>
-                    </div>
-                </div>
-            </Container>
-        </section>
-    ) 
-}
+  return (
+    <section id="projects" className="projects-section reveal">
+      <div className="section-header">
+        <h2>Featured Projects</h2>
+        <div className="section-line"></div>
+      </div>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <div className="project-header">
+              <h3>{project.title}</h3>
+              <div className="project-links">
+                <a href="#" className="project-link">
+                  <span>GitHub</span>
+                </a>
+                <a href="#" className="project-link">
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+            <p className="project-description">{project.description}</p>
+            <div className="project-tech">
+              {project.tech.map((tech, techIndex) => (
+                <span key={techIndex} className="tech-tag">{tech}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Projects;
