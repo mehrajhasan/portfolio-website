@@ -1,55 +1,64 @@
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import pic from '../assets/images/connect.png';
+// components/Connect.js
+import React from 'react';
 
-export const Connect = () => {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_daiqp9n', 'template_ei32f3y', form.current, {
-        publicKey: 'Is6api_YrDkbATLX4',
-      })
-      .then(
-        () => {
-          console.log('Success');
-          e.target.reset();
-        },
-        (error) => {
-          console.log('Failed...', error.text);
-        },
-      );
-  };
-
-    return(
-        <section className="connect" id="connect">
-            <div className="connectimg">
-                <img src={pic} alt='pic'/>
+const Connect = () => {
+  return (
+    <section id="contact" className="contact-section reveal">
+      <div className="section-header">
+        <h2>Get In Touch</h2>
+        <div className="section-line"></div>
+      </div>
+      <div className="contact-content">
+        <div className="contact-info">
+            <div className="contact-item">
+            <div className="contact-icon">📧</div>
+            <div className="contact-details">
+              <h3>Email</h3>
+              <p>mehrajhasancs@gmail.com</p>
             </div>
-            <div className="connectbox">
-                <form ref={form} onSubmit={sendEmail}>
-                    <div className="nameemail">
-                        <div className="name">
-                            <h2>Name</h2>
-                            <input type="text" name="from_name" placeholder="Name"/>
-                        </div>
-
-                        <div className="email">
-                            <h2>Email</h2>
-                            <input type="email" name="from_email" placeholder="Email"/>
-                        </div>
-                    </div>
-
-                    <div className="message">
-                        <h2>Message</h2>
-                        <textarea name="message" placeholder="Message"/>
-                    </div>
-
-                    <input type="submit" value="Send" />
-                </form>
+          </div>
+          <div className="contact-item">
+            <div className="contact-icon">💼</div>
+            <div className="contact-details">
+              <h3>LinkedIn</h3>
+              <p>linkedin.com/in/mehrajhasan</p>
             </div>
-        </section>
-    )
-}
+          </div>
+          <div className="contact-item">
+            <div className="contact-icon">🐙</div>
+            <div className="contact-details">
+              <h3>GitHub</h3>
+              <p>github.com/mehrajhasan</p>
+            </div>
+          </div>
+          <div className="contact-item">
+            <div className="contact-icon">📍</div>
+            <div className="contact-details">
+              <h3>Location</h3>
+              <p>New York, NY</p>
+            </div>
+          </div>
+        </div>
+        <div className="contact-form">
+          <form>
+            <div className="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div className="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div className="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" className="submit-btn">
+              <span>Send Message</span>
+              <div className="btn-glow"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Connect;
