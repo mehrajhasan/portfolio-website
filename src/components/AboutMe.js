@@ -8,13 +8,13 @@ const AboutMe = () => {
       title: 'Software Engineer Intern',
       company: 'Pulp Technology',
       duration: 'Jul 2023 - Aug 2023',
-      description: 'Worked on a real-time comment system used in production. Designed frontend user flows with React for threaded replies and toggled views. Handled backend integration by building routes/controllers to match frontend needs. Collaborated tightly with a peer on fast iteration and feature rollout.'
+      description: 'Built an interactive, threaded comments feature using React.js and Spring Boot to enhance user engagement. Designed scalable backend APIs and data models with JPA for efficient storage and retrieval. Also contributed to robust unit and integration testing, helping ensure over 90% test coverage and strong backend reliability. Collaborated tightly with a peer on fast iteration and feature rollout.'
     },
     {
       title: 'Software Engineer Intern',
       company: 'Metro Restoration',
       duration: 'Jun 2022 - Aug 2022',
-      description: 'Independently designed and developed a responsive company website using HTML, CSS, and JavaScript. Delivered a clean, user-friendly UI with full cross-browser and mobile support. Ensured the site reflected brand consistency and performance best practices. Completed the project end-to-end with minimal guidance.'
+      description: 'Redesigned site architecture using React.js and Node.js to support responsive, server-rendered pages. Developed reusable, cross-browser compatible UI components with modern JavaScript and CSS for a consistent and scalable user experience.'
     }
   ];
 
