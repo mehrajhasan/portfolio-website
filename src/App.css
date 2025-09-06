@@ -591,11 +591,14 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   transition: all 0.3s ease;
+  text-decoration: none;   
+  color: inherit;
 }
 
 .contact-item:hover {
   border-color: rgba(0, 255, 255, 0.5);
   transform: translateX(10px);
+  text-decoration: none;
 }
 
 .contact-icon {
