@@ -10,7 +10,7 @@ const Projects = () => {
     },
     {
       title: 'NutriLift',
-      description: 'Developing an iOS fitness app using Swift and SwiftUI for frontend with Node.js and PostgreSQL backend. Implemented JWT auth flow, cutting login-related data sync issues by 75%. Built secure user data APIs with token validation.',
+      description: 'NutriLift is an iOS fitness app built with Swift and SwiftUI on the frontend and a Node.js + PostgreSQL backend, developed in collaboration with a three-person team. Beyond tracking workouts and nutrition, NutriLift functions like a fitness-focused social platform where users can create profiles, follow friends, and compete on leaderboards. I implemented a JWT-based authentication flow, cutting login-related data sync issues by over 75% during testing and enabling isolated user sessions across devices. I also designed and built the user profile system with viewing and editing support, added social connections, and developed secure data APIs with token validation, error handling, and database synchronization.',
       tech: ['Swift', 'SwiftUI', 'Node.js', 'PostgreSQL', 'JWT'],
       link: 'https://github.com/mehrajhasan/NutriLift',
       github: 'https://github.com/mehrajhasan/cunybot'
