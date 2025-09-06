@@ -10,27 +10,27 @@ const Connect = () => {
       </div>
       <div className="contact-content">
         <div className="contact-info">
-            <div className="contact-item">
+            <a href="mailto:mehrajhasancs@gmail.com" className="contact-item">
             <div className="contact-icon">📧</div>
             <div className="contact-details">
               <h3>Email</h3>
               <p>mehrajhasancs@gmail.com</p>
             </div>
-          </div>
-          <div className="contact-item">
+          </a>
+          <a href="https://www.linkedin.com/in/mehrajhasan" className="contact-item">
             <div className="contact-icon">💼</div>
             <div className="contact-details">
               <h3>LinkedIn</h3>
               <p>linkedin.com/in/mehrajhasan</p>
             </div>
-          </div>
-          <div className="contact-item">
+          </a>
+          <a href="https://www.github.com/mehrajhasan" className="contact-item" >
             <div className="contact-icon">🐙</div>
             <div className="contact-details">
               <h3>GitHub</h3>
               <p>github.com/mehrajhasan</p>
             </div>
-          </div>
+          </a>
           <div className="contact-item">
             <div className="contact-icon">📍</div>
             <div className="contact-details">

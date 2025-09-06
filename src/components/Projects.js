@@ -4,33 +4,44 @@ const Projects = () => {
   const projects = [
     {
       title: 'PlanAway',
-      description: 'Building a collaborative travel planner with real-time itinerary editing, shared reservations, and multi-user expense tracking. Engineered offline-ready guest mode with localStorage sync, cutting onboarding friction by 80%. Deploying on GCP using Cloud Run.',
-      tech: ['Java', 'Spring Boot', 'React.js', 'PostgreSQL', 'GCP']
+      description: 'Developed PlanAway, a collaborative travel planner used by 50+ users, featuring real-time itinerary editing, shared reservations, and multi-user expense tracking. Implemented RESTful APIs with Spring Boot and PostgreSQL, with transactional logic via Spring Data JPA for reliable trip and expense workflows. Deployed on Google Cloud Run using Docker containerization, delivering scalable, low-latency performance in production.',
+      tech: ['Java', 'Spring Boot', 'React.js', 'PostgreSQL', 'GCP'],
+      link: 'https://www.planaway.xyz'
     },
     {
       title: 'NutriLift',
       description: 'Developing an iOS fitness app using Swift and SwiftUI for frontend with Node.js and PostgreSQL backend. Implemented JWT auth flow, cutting login-related data sync issues by 75%. Built secure user data APIs with token validation.',
-      tech: ['Swift', 'SwiftUI', 'Node.js', 'PostgreSQL', 'JWT']
+      tech: ['Swift', 'SwiftUI', 'Node.js', 'PostgreSQL', 'JWT'],
+      link: 'https://github.com/mehrajhasan/NutriLift',
+      github: 'https://github.com/mehrajhasan/cunybot'
     },
     {
       title: 'CUNYBot',
       description: 'Developed an automated bot to monitor and enroll in CUNY courses using web scraping and HTTP automation, improving enrollment efficiency by 80%. Engineered multi-user concurrency and integrated Discord webhooks for real-time notifications.',
-      tech: ['Node.js', 'Got', 'Cheerio', 'Discord API', 'Web Scraping']
+      tech: ['Node.js', 'Got', 'Cheerio', 'Discord API', 'Web Scraping'],
+      link: 'https://github.com/mehrajhasan/cunybot',
+      github: 'https://github.com/mehrajhasan/cunybot'
     },
     {
       title: 'Matching Engine',
       description: 'Java-based terminal application simulating a basic trading system with real-time limit order matching',
-      tech: ['Java']
+      tech: ['Java'],
+      link: 'https://github.com/mehrajhasan/cli-matching-engine',
+      github: 'https://github.com/mehrajhasan/todo-app'
     },
     {
       title: 'Java To Do App',
       description: 'Simple CRUD web app demonstrating layered Spring Boot architecture',
-      tech: ['Java', 'Spring Boot', 'JPA', 'REST APIs']
+      tech: ['Java', 'Spring Boot', 'JPA', 'REST APIs'],
+      link: 'https://github.com/mehrajhasan/todo-app',
+      github: 'https://github.com/mehrajhasan/todo-app'
     },
     {
       title: 'Watch It Now',
       description: 'Developed a web application to monitor and retrieve movie/TV show availability across platforms. Integrated Watchmode API using Axios, cutting redundant fetches by 60%. Built user-friendly React.js frontend for displaying content data.',
-      tech: ['React.js', 'Node.js', 'Express.js', 'Axios', 'Watchmode API']
+      tech: ['React.js', 'Node.js', 'Express.js', 'Axios', 'Watchmode API'],
+      link: 'https://watchitnowbymehraj.netlify.app/',
+      github: 'https://github.com/mehrajhasan/watchitnow'
     },
   ];
 
@@ -46,7 +57,7 @@ const Projects = () => {
             <div className="project-header">
               <h3>{project.title}</h3>
               <div className="project-links">
-                <a href="#" className="project-link">
+                <a href={project.link} className="project-link">
                   <span>GitHub</span>
                 </a>
                 <a href="#" className="project-link">
