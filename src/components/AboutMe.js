@@ -5,6 +5,12 @@ const AboutMe = () => {
   // Experience data
   const experiences = [
     {
+      title: 'Technical Mentee',
+      company: 'Google',
+      duration: 'Oct 2024 - Dec 2024',
+      description: 'Engaged in backend development, problem-solving, and interview preparation as part of Google’s SWE program. Partnered with a Google engineer for code reviews, pair programming, and technical workshops. Strengthened coding performance and interview readiness by applying algorithmic complexity, optimization patterns, and structured debugging techniques.'
+    },
+    {
       title: 'Software Engineer Intern',
       company: 'Pulp Technology',
       duration: 'Jul 2023 - Aug 2023',
